@@ -4,6 +4,7 @@
 #include <cmath>
 using namespace std;
 
+float const tol=0.0001f;
 class Vector3{
     public: float x;
     float y;
@@ -23,9 +24,6 @@ class Vector3{
     Vector3& operator/=(float s);
 
     Vector3 operator-(void);
-    //Vector3 operator+(Vector3 u, Vector3 v);
-
-    float const tol=0.0001f;
 };
 
 inline Vector3::Vector3(void){
