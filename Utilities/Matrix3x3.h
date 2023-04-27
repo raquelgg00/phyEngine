@@ -1,4 +1,8 @@
 #include "Vector3.h"
+
+#ifndef MATRIX3X3_H
+#define MATRIX3X3_H
+
 class Matrix3x3{
     public:
     //elements eij: i -> row, j -> column
@@ -218,3 +222,6 @@ inline Vector3 operator*(Vector3 u, Matrix3x3 m){
                     u.x*m.e13 + u.y*m.e23 + u.z*m.e33
     );
 }
+
+#endif
+

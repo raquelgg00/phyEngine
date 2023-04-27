@@ -1,4 +1,8 @@
 #include "Vector3.h"
+
+#ifndef QUATERNION_H
+#define QUATERNION_H
+
 using namespace std;
 class Quaternion {
     public: 
@@ -31,6 +35,14 @@ inline Quaternion::Quaternion(float e0, float e1, float e2, float e3){
     v.x = e1;
     v.y = e2;
     v.z = e3;
+}
+
+inline float DegreesToRadians(double deg){
+    return (deg*M_PI)/180.0f;
+}
+
+inline float RadiansToDegrees(double rad){
+    return (rad*180.0f)/M_PI;
 }
 
 inline float Quaternion::Magnitude(void){
@@ -214,10 +226,6 @@ inline Vector3 MakeEulerAnglesFromQ(Quaternion q){
     return u;
 }
 
-inline float DegreesToRadians(double deg){
-    return (deg*M_PI)/180.0f;
-}
 
-inline float RadiansToDegrees(double rad){
-    return (rad*180.0f)/M_PI;
-}
+
+#endif

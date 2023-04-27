@@ -1,6 +1,7 @@
 #include "Quaternion.h"
 #include "Matrix3x3.h"
 
+namespace RigidBody{
 typedef struct RigidBody{
     float fMass;
     Matrix3x3 mInertia;
@@ -15,3 +16,5 @@ typedef struct RigidBody{
     Vector3 vForces;
     Vector3 vMomments;
 } RigidBody, *pRigidBody;
+
+}

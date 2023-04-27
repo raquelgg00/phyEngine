@@ -4,9 +4,13 @@
 #include <cmath>
 using namespace std;
 
+
+#ifndef VECTOR3_H
+#define VECTOR3_H
 float const tol=0.0001f;
 class Vector3{
-    public: float x;
+    public: 
+    float x;
     float y;
     float z;
 
@@ -127,3 +131,5 @@ inline float TripleScalarProduct(Vector3 u, Vector3 v, Vector3 w){
                     (u.y * (-v.x*w.z - v.z*w.x))+
                     (u.z * (v.x*w.y - v.y*w.x)) );
 }
+
+#endif
